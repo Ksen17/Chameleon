@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FBC1A08F0B210A36650DE52 /* Pods_Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1155C712EA504534D561D6 /* Pods_Chameleon.framework */; };
 		6FA2457520F80482004D1281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2457420F80482004D1281 /* AppDelegate.swift */; };
 		6FA2457720F80482004D1281 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA2457620F80482004D1281 /* ViewController.swift */; };
 		6FA2457A20F80482004D1281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA2457820F80482004D1281 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		6FA2457B20F80489004D1281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA2457E20F80489004D1281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FA2458020F80489004D1281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E7B28A38E9DAE845D01F75 /* Pods-Chameleon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chameleon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chameleon/Pods-Chameleon.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2F96D13222D2A275CFD3E9 /* Pods-Chameleon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chameleon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chameleon/Pods-Chameleon.release.xcconfig"; sourceTree = "<group>"; };
+		ED1155C712EA504534D561D6 /* Pods_Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FBC1A08F0B210A36650DE52 /* Pods_Chameleon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62BADBF9D104CF6DCD7A5EB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED1155C712EA504534D561D6 /* Pods_Chameleon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6FA2456820F80482004D1281 = {
 			isa = PBXGroup;
 			children = (
 				6FA2457320F80482004D1281 /* Chameleon */,
 				6FA2457220F80482004D1281 /* Products */,
+				F0F51EB6C525D5F2FA744A6F /* Pods */,
+				62BADBF9D104CF6DCD7A5EB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Chameleon;
 			sourceTree = "<group>";
 		};
+		F0F51EB6C525D5F2FA744A6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93E7B28A38E9DAE845D01F75 /* Pods-Chameleon.debug.xcconfig */,
+				BC2F96D13222D2A275CFD3E9 /* Pods-Chameleon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FA2458320F80489004D1281 /* Build configuration list for PBXNativeTarget "Chameleon" */;
 			buildPhases = (
+				ED8B5C884C47BB92A60032C8 /* [CP] Check Pods Manifest.lock */,
 				6FA2456D20F80482004D1281 /* Sources */,
 				6FA2456E20F80482004D1281 /* Frameworks */,
 				6FA2456F20F80482004D1281 /* Resources */,
+				3A4038D9F70611C0350FD0F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A4038D9F70611C0350FD0F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chameleon/Pods-Chameleon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ALCameraViewController/ALCameraViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/PDColorPicker/PDColorPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PaintBucket/PaintBucket.framework",
+				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
+				"${BUILT_PRODUCTS_DIR}/ZoomImageView/ZoomImageView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALCameraViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PDColorPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PaintBucket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZoomImageView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chameleon/Pods-Chameleon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED8B5C884C47BB92A60032C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chameleon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FA2456D20F80482004D1281 /* Sources */ = {
@@ -278,11 +353,13 @@
 		};
 		6FA2458420F80489004D1281 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93E7B28A38E9DAE845D01F75 /* Pods-Chameleon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6Q686ZQ92;
 				INFOPLIST_FILE = Chameleon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +373,13 @@
 		};
 		6FA2458520F80489004D1281 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2F96D13222D2A275CFD3E9 /* Pods-Chameleon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6Q686ZQ92;
 				INFOPLIST_FILE = Chameleon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
